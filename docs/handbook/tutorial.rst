@@ -27,8 +27,9 @@ image. If the image was not read from a file, it is set to None. The size
 attribute is a 2-tuple containing width and height (in pixels). The
 :py:attr:`~PIL.Image.Image.mode` attribute defines the number and names of the
 bands in the image, and also the pixel type and depth. Common modes are “L”
-(luminance) for greyscale images, “RGB” for true color images, and “CMYK” for
-pre-press images.
+(luminance) for 8-bit greyscale images, “I“ for 16-bit greyscale images, “RGB” for true color images, and “CMYK” for
+pre-press images.  (It should be noted that opening a 16-bit image in “L” or “RGB” will result
+in all pixels above 255 being set to 255.)
 
 If the file cannot be opened, an :py:exc:`IOError` exception is raised.
 
